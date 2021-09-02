@@ -15,6 +15,9 @@ app.use( express.json() );
 //conectamos a bbdd
 dbConnection();
 
+//directorio publico
+app.use( express.static('public') );
+
 //rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/hospitales', require('./routes/hospitales'));
